@@ -16,7 +16,7 @@ class MedicoSerializer(serializers.ModelSerializer):
 
 class MedicoCreateSerializer(serializers.Serializer):
     nome = serializers.CharField(max_length=140)
-    matricula = serializers.CharField(max_length=12)
+    crm = serializers.CharField(max_length=12)
     departamento = serializers.CharField(max_length=140)
     login = serializers.CharField(max_length=100)
     senha = serializers.CharField(max_length=100)

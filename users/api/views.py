@@ -31,7 +31,7 @@ class MedicoViewSet(ModelViewSet):
 
         novo_medico = Medico.objects.create(
             nome=serializer.validated_data['nome'],
-            matricula=serializer.validated_data['matricula'],
+            crm=serializer.validated_data['crm'],
             departamento=serializer.validated_data['departamento'],
             user=novo_user
         )

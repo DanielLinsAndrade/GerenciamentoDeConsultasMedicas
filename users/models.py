@@ -17,9 +17,9 @@ class UserProfileExample(models.Model):
 class Medico(models.Model):
 
     nome = models.CharField(max_length=140)
-    matricula = models.CharField(max_length=12)
+    crm = models.CharField(max_length=12)
     departamento = models.CharField(max_length=140)
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.nome
